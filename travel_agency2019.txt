@@ -1,0 +1,465 @@
+drop table Employees312 CASCADE CONSTRAINTS;
+
+create table Employees312(
+Empl_Code varchar2(10),
+Title varchar2(4),
+Full_Name varchar2(30) CONSTRAINT "EMP_FULL__NAME_NN" NOT NULL ENABLE,
+Hiredate date CONSTRAINT "HIREDATE__NN" NOT NULL ENABLE,
+Salary number,
+Manager varchar2(10),
+CONSTRAINT "SALARY_NN" CHECK (Salary > 0) ENABLE,
+CONSTRAINT Employees_312_pk PRIMARY KEY (Empl_Code)
+);
+
+
+
+insert into Employees312 values ('Empl_001', 'Mrs.', 'Flo Colbert', '24-Mar-2018', 2742.96, null);
+insert into Employees312 values ('Empl_002', 'Mr.', 'Rodney Holland', '30-Sep-2016', 3094.61, 'Empl_001');
+insert into Employees312 values ('Empl_003', 'Mrs.', 'Coretta Harrell', '18-May-2015', 2736.74, 'Empl_001');
+insert into Employees312 values ('Empl_004', 'Mr.', 'Chico Bower', '27-Sep-2016', 2782.59, 'Empl_001');
+insert into Employees312 values ('Empl_005', 'Mr.', 'Gerard Shipley', '15-Mar-2015', 3853.02, 'Empl_001');
+insert into Employees312 values ('Empl_006', 'Mr.', 'Bob Orr', '03-Mar-2014', 3002.7, 'Empl_005');
+insert into Employees312 values ('Empl_007', 'Mrs.', 'Carry Khan', '21-Mar-2017', 3254.42, 'Empl_006');
+insert into Employees312 values ('Empl_008', 'Mrs.', 'Cherly Russ', '11-Jul-2014', 3901.8, 'Empl_005');
+insert into Employees312 values ('Empl_009', 'Mr.', 'Abdullah Mueller', '02-Aug-2018', 2999.29, 'Empl_003');
+insert into Employees312 values ('Empl_010', 'Mrs.', 'Elfrieda Glover', '31-Jul-2015', 2581.47, 'Empl_007');
+insert into Employees312 values ('Empl_011', 'Mr.', 'Korey Warhall', '04-Jun-2014', 2890.06, 'Empl_001');
+insert into Employees312 values ('Empl_012', 'Mr.', 'Jarvis Kelly', '15-Mar-2016', 3379.46, 'Empl_003');
+insert into Employees312 values ('Empl_013', 'Mr.', 'Leif Lynn', '26-Aug-2015', 2701.78, 'Empl_012');
+insert into Employees312 values ('Empl_014', 'Mr.', 'Royce Dixon', '21-Mar-2014', 3706.32, 'Empl_013');
+insert into Employees312 values ('Empl_015', 'Mrs.', 'Rania Okeefe', '03-Dec-2015', 2523.71, 'Empl_010');
+insert into Employees312 values ('Empl_016', 'Mr.', 'Sergio Booth', '28-Sep-2014', 2732.21, 'Empl_014');
+insert into Employees312 values ('Empl_017', 'Mrs.', 'Delinda Dodge', '17-Aug-2014', 3715.77, 'Empl_016');
+insert into Employees312 values ('Empl_018', 'Mr.', 'Pavel Garner', '14-May-2018', 2750.61, 'Empl_004');
+insert into Employees312 values ('Empl_019', 'Mrs.', 'Florida Schumacher', '10-Sep-2017', 3854.94, 'Empl_016');
+insert into Employees312 values ('Empl_020', 'Mr.', 'Zachariah Medrano', '07-Apr-2017', 3003.03, 'Empl_006');
+insert into Employees312 values ('Empl_021', 'Mrs.', 'Mina Painter', '20-Dec-2015', 3379.77, 'Empl_015');
+insert into Employees312 values ('Empl_022', 'Mrs.', 'Temika Christiansen', '19-Apr-2017', 3892.7, 'Empl_017');
+insert into Employees312 values ('Empl_023', 'Mr.', 'Otha Meyer', '27-Dec-2015', 3909.5, 'Empl_011');
+insert into Employees312 values ('Empl_024', 'Mr.', 'Chris Howard', '12-Dec-2018', 3513.21, 'Empl_002');
+insert into Employees312 values ('Empl_025', 'Mr.', 'Raul Burke', '31-Jul-2018', 2542.95, 'Empl_009');
+insert into Employees312 values ('Empl_026', 'Mrs.', 'Angelica Coffey', '30-Apr-2015', 3277.6, 'Empl_015');
+insert into Employees312 values ('Empl_027', 'Mr.', 'Wilson Pack', '07-Feb-2016', 2995.74, 'Empl_017');
+insert into Employees312 values ('Empl_028', 'Mrs.', 'Candy Omalley', '02-Apr-2018', 3163.63, 'Empl_009');
+insert into Employees312 values ('Empl_029', 'Mrs.', 'Shandra Beach', '12-Nov-2017', 3310.18, 'Empl_011');
+insert into Employees312 values ('Empl_030', 'Mrs.', 'Leeanne Andrews', '24-May-2015', 3390.86, 'Empl_020');
+insert into Employees312 values ('Empl_031', 'Mr.', 'Emmitt Wilford', '19-Oct-2017', 3776.1, 'Empl_014');
+insert into Employees312 values ('Empl_032', 'Mrs.', 'Arnetta Allred', '09-Apr-2018', 2931.08, 'Empl_022');
+insert into Employees312 values ('Empl_033', 'Mrs.', 'Lisandra Simmons', '04-Jul-2014', 3667.26, 'Empl_027');
+insert into Employees312 values ('Empl_034', 'Mrs.', 'Leora Bennet', '16-Feb-2014', 2888.28, 'Empl_030');
+insert into Employees312 values ('Empl_035', 'Mrs.', 'Waneta Plummer', '11-Oct-2016', 2822.56, 'Empl_008');
+insert into Employees312 values ('Empl_036', 'Mr.', 'Harvey Owen', '18-Sep-2014', 2745.94, 'Empl_016');
+insert into Employees312 values ('Empl_037', 'Mrs.', 'Eleonor Yarbrough', '26-Aug-2017', 3785.51, 'Empl_007');
+insert into Employees312 values ('Empl_038', 'Mr.', 'Santos Straut', '10-Apr-2018', 3007.79, 'Empl_019');
+insert into Employees312 values ('Empl_039', 'Mr.', 'Earnest Bowling', '30-Aug-2015', 3310.23, 'Empl_032');
+insert into Employees312 values ('Empl_040', 'Mr.', 'Earnest Ingram', '08-May-2017', 2708.32, 'Empl_007');
+insert into Employees312 values ('Empl_041', 'Mr.', 'Nate Jefferson', '21-Apr-2015', 3533.57, 'Empl_020');
+insert into Employees312 values ('Empl_042', 'Mrs.', 'Juanita Monet', '22-Feb-2016', 3233.83, 'Empl_007');
+insert into Employees312 values ('Empl_043', 'Mrs.', 'Iliana Burrows', '05-Sep-2018', 3031.76, 'Empl_033');
+insert into Employees312 values ('Empl_044', 'Mr.', 'Jorge Skilling', '05-Feb-2016', 2723.53, 'Empl_018');
+insert into Employees312 values ('Empl_045', 'Mrs.', 'Rachelle Zappa', '07-Aug-2014', 2852.92, 'Empl_023');
+insert into Employees312 values ('Empl_046', 'Mrs.', 'Elfrieda Andrade', '28-Nov-2018', 3309.89, 'Empl_005');
+insert into Employees312 values ('Empl_047', 'Mrs.', 'Vickie Salas', '27-Feb-2015', 2802.82, 'Empl_018');
+insert into Employees312 values ('Empl_048', 'Mrs.', 'Roxane Connell', '20-Sep-2018', 3671.77, 'Empl_042');
+insert into Employees312 values ('Empl_049', 'Mrs.', 'Ethel Rasmussen', '09-Jun-2018', 2758.14, 'Empl_020');
+insert into Employees312 values ('Empl_050', 'Mrs.', 'Valerie Nance', '28-Feb-2014', 3785.81, 'Empl_038');
+
+
+
+
+drop table Customers312 CASCADE CONSTRAINTS;
+
+create table Customers312(
+Customer_Code varchar2(10) CONSTRAINT "COSTUMER_NN" NOT NULL ENABLE,
+Gender varchar2(8),
+Title varchar2(4),
+Age number,
+Full_Name varchar2(30),
+Address varchar2(30),
+Transportation_Mean varchar2(15),
+CONSTRAINT "AGE312_MIN" CHECK (Age > 17) ENABLE,
+CONSTRAINT Customers312_pk PRIMARY KEY (Customer_Code)
+);
+
+insert into Customers312 values ('Cust_001', 'Male', 'Mr.', 50, 'Nathanael Carrasco', '64, Rowlands Square', 'Airplane');
+insert into Customers312 values ('Cust_002', 'Female', 'Mrs.', 40, 'Priscilla Franks', '127, Mcintyre Place', 'Airplane');
+insert into Customers312 values ('Cust_003', 'Female', 'Mrs.', 28, 'Delma Battle', '182, Andrews Street', 'Train');
+insert into Customers312 values ('Cust_004', 'Male', 'Mr.', 55, 'Noe Sosa', '155, Faulkner Square', 'Ferries');
+insert into Customers312 values ('Cust_005', 'Male', 'Mr.', 49, 'Juan Burton', '150, Santana Lane', 'Train');
+insert into Customers312 values ('Cust_006', 'Male', 'Mr.', 45, 'Hung Bernier', '155, Cortes Lane', 'Bus');
+insert into Customers312 values ('Cust_007', 'Male', 'Mr.', 53, 'Ivan Mcbride', '34, Granger Place', 'Airplane');
+insert into Customers312 values ('Cust_008', 'Female', 'Mrs.', 55, 'Marquetta Kilgore', '162, Byrne Place', 'Ferries');
+insert into Customers312 values ('Cust_009', 'Male', 'Mr.', 23, 'Rudolf Lund', '16, Lynch Park', 'Ferries');
+insert into Customers312 values ('Cust_010', 'Male', 'Mr.', 38, 'Jed Gibbons', '134, Madrigal Park', 'Ferries');
+insert into Customers312 values ('Cust_011', 'Female', 'Mrs.', 24, 'Eleonor Bismarck', '158, Rodriquez Avenue', 'Bus');
+insert into Customers312 values ('Cust_012', 'Female', 'Mrs.', 34, 'Leeanne Landrieu', '20, Mora Place', 'Bus');
+insert into Customers312 values ('Cust_013', 'Female', 'Mrs.', 58, 'Johana Regan', '77, Barker Place', 'Train');
+insert into Customers312 values ('Cust_014', 'Male', 'Mr.', 62, 'Graham Mellon', '69, Jacobson Park', 'Ferries');
+insert into Customers312 values ('Cust_015', 'Male', 'Mr.', 52, 'Carlton Matisse', '173, Norman Lane', 'Bus');
+insert into Customers312 values ('Cust_016', 'Female', 'Mrs.', 39, 'Mina Shirley', '160, Hollingsworth Avenue', 'Train');
+insert into Customers312 values ('Cust_017', 'Female', 'Mrs.', 21, 'Emmy Ewing', '150, Story Park', 'Bus');
+insert into Customers312 values ('Cust_018', 'Female', 'Mrs.', 33, 'Melvina Dunbar', '146, Pennington Street', 'Train');
+insert into Customers312 values ('Cust_019', 'Female', 'Mrs.', 46, 'Penny Elliott', '155, Rigby Square', 'Airplane');
+insert into Customers312 values ('Cust_020', 'Male', 'Mr.', 63, 'Amos Ackerman', '134, Edwards Lane', 'Ferries');
+insert into Customers312 values ('Cust_021', 'Male', 'Mr.', 64, 'Raymond Melendez', '32, Yanez Street', 'Airplane');
+insert into Customers312 values ('Cust_022', 'Male', 'Mr.', 49, 'Joe Toney', '194, Donkel Avenue', 'Airplane');
+insert into Customers312 values ('Cust_023', 'Male', 'Mr.', 60, 'Justin Emery', '178, Haywood Place', 'Train');
+insert into Customers312 values ('Cust_024', 'Male', 'Mr.', 28, 'Brady Lowery', '68, Tapia Park', 'Private_Car');
+insert into Customers312 values ('Cust_025', 'Female', 'Mrs.', 70, 'Gertrud Burris', '189, Dirac Lane', 'Private_Car');
+insert into Customers312 values ('Cust_026', 'Male', 'Mr.', 28, 'Agustin Rangel', '183, Britt Lane', 'Private_Car');
+insert into Customers312 values ('Cust_027', 'Male', 'Mr.', 61, 'Duncan Cavalli', '42, Glitsky Place', 'Bus');
+insert into Customers312 values ('Cust_028', 'Male', 'Mr.', 25, 'Monte Mccarty', '36, Jeffries Lane', 'Bus');
+insert into Customers312 values ('Cust_029', 'Male', 'Mr.', 56, 'Nicky Hedrick', '22, Glitsky Square', 'Bus');
+insert into Customers312 values ('Cust_030', 'Male', 'Mr.', 48, 'Jessie Ludwig', '96, Haney Place', 'Bus');
+insert into Customers312 values ('Cust_031', 'Male', 'Mr.', 48, 'Fred Griffin', '46, Saenz Park', 'Private_Car');
+insert into Customers312 values ('Cust_032', 'Female', 'Mrs.', 42, 'Chastity Vaughn', '131, Rickette Park', 'Train');
+insert into Customers312 values ('Cust_033', 'Female', 'Mrs.', 70, 'Kathline Neff', '93, Anaya Place', 'Airplane');
+insert into Customers312 values ('Cust_034', 'Male', 'Mr.', 33, 'Gregory Reese', '55, Polk Avenue', 'Train');
+insert into Customers312 values ('Cust_035', 'Male', 'Mr.', 49, 'Efrain Singleton', '59, Chandler Lane', 'Private_Car');
+insert into Customers312 values ('Cust_036', 'Male', 'Mr.', 70, 'Werner Dale', '110, Martinet Street', 'Airplane');
+insert into Customers312 values ('Cust_037', 'Male', 'Mr.', 30, 'Dustin Blanco', '70, Gunn Avenue', 'Bus');
+insert into Customers312 values ('Cust_038', 'Male', 'Mr.', 64, 'Randall Weller', '80, Bowers Square', 'Ferries');
+insert into Customers312 values ('Cust_039', 'Male', 'Mr.', 30, 'Stan Sheridan', '15, Adair Place', 'Train');
+insert into Customers312 values ('Cust_040', 'Male', 'Mr.', 25, 'Cristopher Vaughn', '40, Garrison Avenue', 'Bus');
+insert into Customers312 values ('Cust_041', 'Female', 'Mrs.', 65, 'Juliette Albright', '66, Rush Avenue', 'Train');
+insert into Customers312 values ('Cust_042', 'Male', 'Mr.', 58, 'Trey Serna', '166, Russo Square', 'Airplane');
+insert into Customers312 values ('Cust_043', 'Male', 'Mr.', 50, 'Rod Abraham', '148, Meier Park', 'Private_Car');
+insert into Customers312 values ('Cust_044', 'Male', 'Mr.', 34, 'Cristopher Aarhus', '88, Hickey Place', 'Bus');
+insert into Customers312 values ('Cust_045', 'Female', 'Mrs.', 55, 'Darlena Jacobsen', '32, Houser Place', 'Train');
+insert into Customers312 values ('Cust_046', 'Male', 'Mr.', 60, 'Hubert Thacker', '168, Mckee Square', 'Private_Car');
+insert into Customers312 values ('Cust_047', 'Female', 'Mrs.', 74, 'Breann Alston', '182, Frost Park', 'Private_Car');
+insert into Customers312 values ('Cust_048', 'Female', 'Mrs.', 22, 'Olene Lowry', '59, Shannon Street', 'Train');
+insert into Customers312 values ('Cust_049', 'Male', 'Mr.', 68, 'Fermin Kirkland', '41, Ogden Street', 'Train');
+insert into Customers312 values ('Cust_050', 'Male', 'Mr.', 49, 'Danilo Zappa', '95, Forrester Lane', 'Train');
+insert into Customers312 values ('Cust_051', 'Female', 'Mrs.', 47, 'Niki Aguilera', '100, Caskill Avenue', 'Private_Car');
+insert into Customers312 values ('Cust_052', 'Male', 'Mr.', 49, 'Johnny Abramson', '24, Puckett Street', 'Airplane');
+insert into Customers312 values ('Cust_053', 'Male', 'Mr.', 54, 'Gordon Lowry', '158, Irons Street', 'Private_Car');
+insert into Customers312 values ('Cust_054', 'Female', 'Mrs.', 63, 'Elinor Dominico', '120, Cowan Park', 'Private_Car');
+insert into Customers312 values ('Cust_055', 'Female', 'Mrs.', 58, 'Simone Kettering', '94, Crawford Street', 'Airplane');
+insert into Customers312 values ('Cust_056', 'Male', 'Mr.', 45, 'Kareem Krueger', '15, Tidwell Place', 'Train');
+insert into Customers312 values ('Cust_057', 'Female', 'Mrs.', 52, 'Olive Cox', '135, Cantrell Park', 'Private_Car');
+insert into Customers312 values ('Cust_058', 'Male', 'Mr.', 48, 'Curtis Dumas', '111, Hales Square', 'Train');
+insert into Customers312 values ('Cust_059', 'Female', 'Mrs.', 46, 'Alane Singh', '2, Robbins Lane', 'Private_Car');
+insert into Customers312 values ('Cust_060', 'Female', 'Mrs.', 72, 'Ayesha Welsh', '99, Mortimer Street', 'Train');
+insert into Customers312 values ('Cust_061', 'Male', 'Mr.', 22, 'Laurence Hagan', '17, Delong Square', 'Bus');
+insert into Customers312 values ('Cust_062', 'Male', 'Mr.', 49, 'Ezra Jamison', '64, Simpson Place', 'Train');
+insert into Customers312 values ('Cust_063', 'Male', 'Mr.', 57, 'Wesley Sears', '165, Bourne Park', 'Ferries');
+insert into Customers312 values ('Cust_064', 'Female', 'Mrs.', 54, 'Rozella Hanks', '42, Mcgee Park', 'Bus');
+insert into Customers312 values ('Cust_065', 'Male', 'Mr.', 59, 'Orfeo Vigil', '18, Caballero Square', 'Train');
+insert into Customers312 values ('Cust_066', 'Female', 'Mrs.', 73, 'Chryssa McCullough', '167, Wiles Square', 'Train');
+insert into Customers312 values ('Cust_067', 'Male', 'Mr.', 65, 'Richie Robins', '156, Roth Lane', 'Private_Car');
+insert into Customers312 values ('Cust_068', 'Male', 'Mr.', 52, 'Colton Irons', '141, Highlander Street', 'Airplane');
+insert into Customers312 values ('Cust_069', 'Male', 'Mr.', 52, 'Bryce Stabler', '39, Allison Park', 'Bus');
+insert into Customers312 values ('Cust_070', 'Female', 'Mrs.', 46, 'Bertha Mohr', '97, Maxwell Place', 'Private_Car');
+insert into Customers312 values ('Cust_071', 'Male', 'Mr.', 52, 'Rigoberto Richmond', '69, Ernst Square', 'Private_Car');
+insert into Customers312 values ('Cust_072', 'Female', 'Mrs.', 59, 'Melodie Ivey', '149, Milton Park', 'Train');
+insert into Customers312 values ('Cust_073', 'Male', 'Mr.', 66, 'Basil Galis', '67, Helms Place', 'Airplane');
+insert into Customers312 values ('Cust_074', 'Female', 'Mrs.', 47, 'Andria Starks', '62, Crain Park', 'Bus');
+insert into Customers312 values ('Cust_075', 'Female', 'Mrs.', 31, 'Agustina Ortega', '133, Guthrie Park', 'Train');
+insert into Customers312 values ('Cust_076', 'Male', 'Mr.', 61, 'Stephan David', '17, Burris Place', 'Airplane');
+insert into Customers312 values ('Cust_077', 'Male', 'Mr.', 42, 'Philemon Stahl', '109, Shannon Avenue', 'Ferries');
+insert into Customers312 values ('Cust_078', 'Female', 'Mrs.', 51, 'Lily Perry', '162, Kern Place', 'Ferries');
+insert into Customers312 values ('Cust_079', 'Male', 'Mr.', 59, 'Allen Chappell', '134, Burgess Avenue', 'Bus');
+insert into Customers312 values ('Cust_080', 'Male', 'Mr.', 18, 'Jackie Lund', '103, Tapia Place', 'Airplane');
+
+
+
+drop table Categories312 CASCADE CONSTRAINTS;
+
+create table Categories312(
+Category_Number varchar2(15) CONSTRAINT "CATEGORY_NN" NOT NULL ENABLE,
+Type varchar2(20),
+Category_Desc varchar2(15),
+Duration varchar2(10),
+
+CONSTRAINT Categories312_pk PRIMARY KEY (Category_Number)
+);
+
+insert into Categories312 values ('Category_1', 'Sight_Seeing', 'Informative', '4_days');
+insert into Categories312 values ('Category_2', 'Soft_Adventure', 'Flexible', '3_days');
+insert into Categories312 values ('Category_3', 'Private_Tour', 'Leisure', '4_days');
+insert into Categories312 values ('Category_4', 'Walking_Tour', 'Relaxing', '4_days');
+insert into Categories312 values ('Category_5', 'Water_Activities', 'Adventurous', '2_days');
+
+
+drop table Locations312 CASCADE CONSTRAINTS; 
+
+create table Locations312(
+Location_Code varchar2(15) CONSTRAINT "LOCATION__NN" NOT NULL ENABLE,
+Location_Name varchar2(20),
+Price_Per_Day number,
+Category_Number varchar2(15),
+CONSTRAINT "PRICE_NN" CHECK (Price_Per_Day > 0) ENABLE,
+CONSTRAINT Locations_312_pk PRIMARY KEY (Location_Code)
+);
+
+insert into Locations312 values ('Location_001', 'Athens', 85.48, 'Category_1');
+insert into Locations312 values ('Location_002', 'Milan', 77.72, 'Category_1');
+insert into Locations312 values ('Location_003', 'Istanbul', 77.24, 'Category_2');
+insert into Locations312 values ('Location_004', 'Dubrovnik', 84.53, 'Category_1');
+insert into Locations312 values ('Location_005', 'Zagreb', 52.09, 'Category_2');
+insert into Locations312 values ('Location_006', 'Menton', 58.73, 'Category_3');
+insert into Locations312 values ('Location_007', 'Rome', 92.25, 'Category_4');
+insert into Locations312 values ('Location_008', 'Thessaloniki', 88.91, 'Category_2');
+insert into Locations312 values ('Location_009', 'Venice', 62.69, 'Category_5');
+insert into Locations312 values ('Location_010', 'Barcelona', 77.34, 'Category_4');
+insert into Locations312 values ('Location_011', 'Madrid', 60.93, 'Category_5');
+insert into Locations312 values ('Location_012', 'Nice', 51.14, 'Category_2');
+insert into Locations312 values ('Location_013', 'Belgrade', 73, 'Category_5');
+insert into Locations312 values ('Location_014', 'Ankara', 75.17, 'Category_3');
+insert into Locations312 values ('Location_015', 'Nafplio', 92.26, 'Category_3');
+insert into Locations312 values ('Location_016', 'Lisbon', 56.94, 'Category_3');
+insert into Locations312 values ('Location_017', 'Paris', 83.61, 'Category_5');
+insert into Locations312 values ('Location_018', 'Berlin', 60.17, 'Category_3');
+insert into Locations312 values ('Location_019', 'Lion', 83.96, 'Category_1');
+insert into Locations312 values ('Location_020', 'Oslo', 61.68, 'Category_4');
+
+
+drop table Excursions312 CASCADE CONSTRAINTS;
+
+create table Excursions312(
+Excursion_Code varchar2(16) CONSTRAINT "EXCURSION_NN" NOT NULL ENABLE,
+Location_Code varchar2(15),
+Empl_Code varchar2(10),
+Customer_Code varchar2(10),
+Reservation_Date date,
+Trip_Reservations number,
+
+CONSTRAINT Excursions312_pk PRIMARY KEY (Excursion_Code)
+);
+
+insert into Excursions312 values ('Excursion_001', 'Location_008', 'Empl_016', 'Cust_042', '19-Dec-2016', 9);
+insert into Excursions312 values ('Excursion_002', 'Location_002', 'Empl_006', 'Cust_063', '27-Jun-2018', 5);
+insert into Excursions312 values ('Excursion_003', 'Location_003', 'Empl_037', 'Cust_030', '03-Mar-2016', 4);
+insert into Excursions312 values ('Excursion_004', 'Location_020', 'Empl_032', 'Cust_015', '08-Jul-2017', 9);
+insert into Excursions312 values ('Excursion_005', 'Location_019', 'Empl_018', 'Cust_067', '14-Jan-2014', 3);
+insert into Excursions312 values ('Excursion_006', 'Location_009', 'Empl_012', 'Cust_053', '17-Dec-2018', 4);
+insert into Excursions312 values ('Excursion_007', 'Location_001', 'Empl_002', 'Cust_037', '17-Mar-2017', 8);
+insert into Excursions312 values ('Excursion_008', 'Location_020', 'Empl_005', 'Cust_059', '29-Oct-2018', 10);
+insert into Excursions312 values ('Excursion_009', 'Location_017', 'Empl_014', 'Cust_038', '31-Jan-2014', 5);
+insert into Excursions312 values ('Excursion_010', 'Location_006', 'Empl_027', 'Cust_038', '16-Oct-2018', 1);
+insert into Excursions312 values ('Excursion_011', 'Location_009', 'Empl_045', 'Cust_020', '27-Aug-2015', 1);
+insert into Excursions312 values ('Excursion_012', 'Location_017', 'Empl_024', 'Cust_049', '23-Jan-2014', 1);
+insert into Excursions312 values ('Excursion_013', 'Location_005', 'Empl_044', 'Cust_077', '06-Aug-2018', 7);
+insert into Excursions312 values ('Excursion_014', 'Location_007', 'Empl_007', 'Cust_005', '10-Dec-2014', 7);
+insert into Excursions312 values ('Excursion_015', 'Location_006', 'Empl_009', 'Cust_078', '29-Nov-2014', 4);
+insert into Excursions312 values ('Excursion_016', 'Location_001', 'Empl_017', 'Cust_012', '15-Feb-2017', 2);
+insert into Excursions312 values ('Excursion_017', 'Location_014', 'Empl_003', 'Cust_045', '18-Feb-2018', 8);
+insert into Excursions312 values ('Excursion_018', 'Location_014', 'Empl_044', 'Cust_026', '16-Sep-2017', 9);
+insert into Excursions312 values ('Excursion_019', 'Location_011', 'Empl_026', 'Cust_053', '07-Apr-2018', 1);
+insert into Excursions312 values ('Excursion_020', 'Location_010', 'Empl_013', 'Cust_049', '08-Feb-2017', 5);
+insert into Excursions312 values ('Excursion_021', 'Location_009', 'Empl_017', 'Cust_021', '06-May-2016', 10);
+insert into Excursions312 values ('Excursion_022', 'Location_004', 'Empl_001', 'Cust_070', '02-Apr-2016', 9);
+insert into Excursions312 values ('Excursion_023', 'Location_007', 'Empl_038', 'Cust_017', '17-Dec-2016', 3);
+insert into Excursions312 values ('Excursion_024', 'Location_011', 'Empl_016', 'Cust_070', '21-Sep-2014', 1);
+insert into Excursions312 values ('Excursion_025', 'Location_020', 'Empl_027', 'Cust_063', '23-Mar-2016', 5);
+insert into Excursions312 values ('Excursion_026', 'Location_006', 'Empl_038', 'Cust_063', '04-Feb-2017', 10);
+insert into Excursions312 values ('Excursion_027', 'Location_005', 'Empl_018', 'Cust_071', '12-Oct-2017', 9);
+insert into Excursions312 values ('Excursion_028', 'Location_001', 'Empl_046', 'Cust_038', '15-Jul-2015', 8);
+insert into Excursions312 values ('Excursion_029', 'Location_017', 'Empl_031', 'Cust_018', '12-Apr-2016', 9);
+insert into Excursions312 values ('Excursion_030', 'Location_020', 'Empl_009', 'Cust_072', '27-Jan-2018', 4);
+insert into Excursions312 values ('Excursion_031', 'Location_006', 'Empl_039', 'Cust_019', '19-Jan-2016', 5);
+insert into Excursions312 values ('Excursion_032', 'Location_012', 'Empl_046', 'Cust_027', '02-Jun-2018', 5);
+insert into Excursions312 values ('Excursion_033', 'Location_018', 'Empl_038', 'Cust_040', '29-Jul-2015', 8);
+insert into Excursions312 values ('Excursion_034', 'Location_007', 'Empl_022', 'Cust_026', '11-Mar-2017', 2);
+insert into Excursions312 values ('Excursion_035', 'Location_015', 'Empl_012', 'Cust_066', '18-Nov-2014', 5);
+insert into Excursions312 values ('Excursion_036', 'Location_014', 'Empl_047', 'Cust_063', '23-Jun-2016', 4);
+insert into Excursions312 values ('Excursion_037', 'Location_004', 'Empl_024', 'Cust_041', '16-Nov-2018', 6);
+insert into Excursions312 values ('Excursion_038', 'Location_009', 'Empl_028', 'Cust_017', '28-Jan-2014', 1);
+insert into Excursions312 values ('Excursion_039', 'Location_001', 'Empl_037', 'Cust_016', '05-Jan-2015', 4);
+insert into Excursions312 values ('Excursion_040', 'Location_010', 'Empl_048', 'Cust_014', '21-Apr-2018', 9);
+insert into Excursions312 values ('Excursion_041', 'Location_006', 'Empl_032', 'Cust_024', '26-Aug-2016', 6);
+insert into Excursions312 values ('Excursion_042', 'Location_008', 'Empl_048', 'Cust_026', '13-Nov-2015', 5);
+insert into Excursions312 values ('Excursion_043', 'Location_005', 'Empl_035', 'Cust_038', '23-Jun-2016', 7);
+insert into Excursions312 values ('Excursion_044', 'Location_014', 'Empl_020', 'Cust_001', '02-Apr-2016', 3);
+insert into Excursions312 values ('Excursion_045', 'Location_007', 'Empl_034', 'Cust_066', '03-Jan-2015', 1);
+insert into Excursions312 values ('Excursion_046', 'Location_018', 'Empl_050', 'Cust_019', '25-Jul-2017', 9);
+insert into Excursions312 values ('Excursion_047', 'Location_004', 'Empl_002', 'Cust_066', '14-Jul-2014', 1);
+insert into Excursions312 values ('Excursion_048', 'Location_013', 'Empl_004', 'Cust_054', '15-Apr-2014', 6);
+insert into Excursions312 values ('Excursion_049', 'Location_012', 'Empl_014', 'Cust_007', '28-Feb-2015', 8);
+insert into Excursions312 values ('Excursion_050', 'Location_015', 'Empl_007', 'Cust_037', '28-Sep-2018', 7);
+insert into Excursions312 values ('Excursion_051', 'Location_018', 'Empl_027', 'Cust_060', '20-May-2015', 9);
+insert into Excursions312 values ('Excursion_052', 'Location_006', 'Empl_039', 'Cust_076', '04-Nov-2014', 9);
+insert into Excursions312 values ('Excursion_053', 'Location_019', 'Empl_046', 'Cust_032', '26-Dec-2015', 5);
+insert into Excursions312 values ('Excursion_054', 'Location_001', 'Empl_048', 'Cust_067', '11-Apr-2018', 4);
+insert into Excursions312 values ('Excursion_055', 'Location_016', 'Empl_047', 'Cust_001', '18-Dec-2018', 2);
+insert into Excursions312 values ('Excursion_056', 'Location_001', 'Empl_024', 'Cust_058', '16-Jun-2015', 1);
+insert into Excursions312 values ('Excursion_057', 'Location_008', 'Empl_035', 'Cust_046', '22-Jul-2015', 2);
+insert into Excursions312 values ('Excursion_058', 'Location_006', 'Empl_039', 'Cust_017', '13-Nov-2016', 8);
+insert into Excursions312 values ('Excursion_059', 'Location_005', 'Empl_028', 'Cust_052', '17-Aug-2014', 1);
+insert into Excursions312 values ('Excursion_060', 'Location_010', 'Empl_049', 'Cust_056', '27-Jul-2014', 2);
+insert into Excursions312 values ('Excursion_061', 'Location_001', 'Empl_050', 'Cust_068', '20-Jul-2018', 4);
+insert into Excursions312 values ('Excursion_062', 'Location_019', 'Empl_003', 'Cust_069', '23-Mar-2018', 9);
+insert into Excursions312 values ('Excursion_063', 'Location_005', 'Empl_037', 'Cust_040', '18-May-2016', 9);
+insert into Excursions312 values ('Excursion_064', 'Location_008', 'Empl_029', 'Cust_058', '31-Jul-2016', 9);
+insert into Excursions312 values ('Excursion_065', 'Location_012', 'Empl_048', 'Cust_048', '06-Aug-2014', 3);
+insert into Excursions312 values ('Excursion_066', 'Location_011', 'Empl_003', 'Cust_072', '14-Jul-2016', 5);
+insert into Excursions312 values ('Excursion_067', 'Location_014', 'Empl_033', 'Cust_067', '24-Apr-2015', 3);
+insert into Excursions312 values ('Excursion_068', 'Location_014', 'Empl_005', 'Cust_040', '13-Sep-2016', 8);
+insert into Excursions312 values ('Excursion_069', 'Location_007', 'Empl_047', 'Cust_072', '10-Jan-2018', 5);
+insert into Excursions312 values ('Excursion_070', 'Location_008', 'Empl_007', 'Cust_046', '29-Mar-2016', 3);
+insert into Excursions312 values ('Excursion_071', 'Location_015', 'Empl_003', 'Cust_059', '04-Mar-2015', 10);
+insert into Excursions312 values ('Excursion_072', 'Location_001', 'Empl_004', 'Cust_011', '07-Jun-2016', 2);
+insert into Excursions312 values ('Excursion_073', 'Location_008', 'Empl_016', 'Cust_040', '09-Apr-2017', 1);
+insert into Excursions312 values ('Excursion_074', 'Location_007', 'Empl_031', 'Cust_020', '16-Feb-2016', 2);
+insert into Excursions312 values ('Excursion_075', 'Location_016', 'Empl_039', 'Cust_066', '01-Sep-2016', 4);
+insert into Excursions312 values ('Excursion_076', 'Location_014', 'Empl_036', 'Cust_080', '21-Sep-2016', 1);
+insert into Excursions312 values ('Excursion_077', 'Location_018', 'Empl_036', 'Cust_025', '21-Apr-2017', 7);
+insert into Excursions312 values ('Excursion_078', 'Location_006', 'Empl_036', 'Cust_006', '02-May-2015', 2);
+insert into Excursions312 values ('Excursion_079', 'Location_009', 'Empl_046', 'Cust_017', '01-Jun-2015', 7);
+insert into Excursions312 values ('Excursion_080', 'Location_004', 'Empl_002', 'Cust_047', '17-Nov-2017', 10);
+
+
+
+drop table Transportation312 CASCADE CONSTRAINTS;
+
+create table Transportation312(
+Transportation_Mean varchar2(15),
+Transportation_Class varchar2(18),
+Included_In_Initial_Price varchar2(3),
+Extra_Price number,
+CONSTRAINT "EXTRA_PRICE_MIN" CHECK (Extra_Price >= 0) ENABLE,
+CONSTRAINT Transportation312_pk PRIMARY KEY (Transportation_Mean)
+);
+
+insert into Transportation312 values ('Airplane', 'Business_Class', 'No', '30');
+insert into Transportation312 values ('Bus', 'Business_Class', 'No', '30');
+insert into Transportation312 values ('Train', 'Business_Class', 'No', '30');
+insert into Transportation312 values ('Ferries', 'Economy_Class', 'Yes', '0');
+insert into Transportation312 values ('Private_Car', 'Business_Class', 'No', '30');
+
+
+drop table Accommodation312 CASCADE CONSTRAINTS;
+
+create table Accommodation312(
+Accommodation_Type varchar2(20),
+Facilities varchar2(15),
+Included_In_Initial_Price varchar2(3),
+Extra_Price1 number,
+CONSTRAINT "EXTRA_PRICE1_MIN" CHECK (Extra_Price1 >= 0) ENABLE,
+CONSTRAINT Accommodation312_pk PRIMARY KEY (Accommodation_Type)
+);
+
+insert into Accommodation312 values ('Apartment', 'Room_Service', 'Yes', 0);
+insert into Accommodation312 values ('Airbnb', 'Room_Service', 'Yes', 0);
+insert into Accommodation312 values ('Bed_and_Breakfast', 'Mini_Bar', 'No', 20);
+insert into Accommodation312 values ('Hotel', 'Mini_Bar', 'No', 20);
+
+
+drop table Reservations312 CASCADE CONSTRAINTS;
+
+create table Reservations312(
+Customer_Code varchar2(10),
+Accommodation_Type varchar2(20),
+Reservation_Number varchar2(10) CONSTRAINT "RESERV_NUMBER_NN" NOT NULL ENABLE,
+
+CONSTRAINT Reservations312_pk PRIMARY KEY (Reservation_Number)
+);
+
+insert into Reservations312 values ('Cust_029', 'Bed_and_Breakfast', 'Res_001');
+insert into Reservations312 values ('Cust_069', 'Hotel', 'Res_002');
+insert into Reservations312 values ('Cust_017', 'Airbnb', 'Res_003');
+insert into Reservations312 values ('Cust_025', 'Hotel', 'Res_004');
+insert into Reservations312 values ('Cust_036', 'Hotel', 'Res_005');
+insert into Reservations312 values ('Cust_071', 'Airbnb', 'Res_006');
+insert into Reservations312 values ('Cust_050', 'Bed_and_Breakfast', 'Res_007');
+insert into Reservations312 values ('Cust_037', 'Airbnb', 'Res_008');
+insert into Reservations312 values ('Cust_039', 'Apartment', 'Res_009');
+insert into Reservations312 values ('Cust_029', 'Apartment', 'Res_010');
+insert into Reservations312 values ('Cust_050', 'Airbnb', 'Res_011');
+insert into Reservations312 values ('Cust_063', 'Apartment', 'Res_012');
+insert into Reservations312 values ('Cust_061', 'Apartment', 'Res_013');
+insert into Reservations312 values ('Cust_005', 'Hotel', 'Res_014');
+insert into Reservations312 values ('Cust_018', 'Apartment', 'Res_015');
+insert into Reservations312 values ('Cust_025', 'Bed_and_Breakfast', 'Res_016');
+insert into Reservations312 values ('Cust_022', 'Airbnb', 'Res_017');
+insert into Reservations312 values ('Cust_039', 'Hotel', 'Res_018');
+insert into Reservations312 values ('Cust_037', 'Apartment', 'Res_019');
+insert into Reservations312 values ('Cust_037', 'Bed_and_Breakfast', 'Res_020');
+insert into Reservations312 values ('Cust_035', 'Apartment', 'Res_021');
+insert into Reservations312 values ('Cust_021', 'Bed_and_Breakfast', 'Res_022');
+insert into Reservations312 values ('Cust_006', 'Apartment', 'Res_023');
+insert into Reservations312 values ('Cust_058', 'Bed_and_Breakfast', 'Res_024');
+insert into Reservations312 values ('Cust_047', 'Airbnb', 'Res_025');
+insert into Reservations312 values ('Cust_005', 'Apartment', 'Res_026');
+insert into Reservations312 values ('Cust_035', 'Apartment', 'Res_027');
+insert into Reservations312 values ('Cust_006', 'Hotel', 'Res_028');
+insert into Reservations312 values ('Cust_006', 'Bed_and_Breakfast', 'Res_029');
+insert into Reservations312 values ('Cust_041', 'Bed_and_Breakfast', 'Res_030');
+insert into Reservations312 values ('Cust_023', 'Apartment', 'Res_031');
+insert into Reservations312 values ('Cust_001', 'Apartment', 'Res_032');
+insert into Reservations312 values ('Cust_037', 'Hotel', 'Res_033');
+insert into Reservations312 values ('Cust_057', 'Apartment', 'Res_034');
+insert into Reservations312 values ('Cust_073', 'Airbnb', 'Res_035');
+insert into Reservations312 values ('Cust_004', 'Bed_and_Breakfast', 'Res_036');
+insert into Reservations312 values ('Cust_015', 'Bed_and_Breakfast', 'Res_037');
+insert into Reservations312 values ('Cust_020', 'Bed_and_Breakfast', 'Res_038');
+insert into Reservations312 values ('Cust_045', 'Apartment', 'Res_039');
+insert into Reservations312 values ('Cust_017', 'Hotel', 'Res_040');
+insert into Reservations312 values ('Cust_064', 'Airbnb', 'Res_041');
+insert into Reservations312 values ('Cust_040', 'Apartment', 'Res_042');
+insert into Reservations312 values ('Cust_038', 'Bed_and_Breakfast', 'Res_043');
+insert into Reservations312 values ('Cust_073', 'Hotel', 'Res_044');
+insert into Reservations312 values ('Cust_073', 'Hotel', 'Res_045');
+insert into Reservations312 values ('Cust_060', 'Hotel', 'Res_046');
+insert into Reservations312 values ('Cust_004', 'Hotel', 'Res_047');
+insert into Reservations312 values ('Cust_060', 'Apartment', 'Res_048');
+insert into Reservations312 values ('Cust_039', 'Bed_and_Breakfast', 'Res_049');
+insert into Reservations312 values ('Cust_042', 'Bed_and_Breakfast', 'Res_050');
+insert into Reservations312 values ('Cust_072', 'Bed_and_Breakfast', 'Res_051');
+insert into Reservations312 values ('Cust_015', 'Apartment', 'Res_052');
+insert into Reservations312 values ('Cust_002', 'Bed_and_Breakfast', 'Res_053');
+insert into Reservations312 values ('Cust_037', 'Bed_and_Breakfast', 'Res_054');
+insert into Reservations312 values ('Cust_023', 'Hotel', 'Res_055');
+insert into Reservations312 values ('Cust_017', 'Hotel', 'Res_056');
+insert into Reservations312 values ('Cust_020', 'Bed_and_Breakfast', 'Res_057');
+insert into Reservations312 values ('Cust_034', 'Hotel', 'Res_058');
+insert into Reservations312 values ('Cust_017', 'Apartment', 'Res_059');
+insert into Reservations312 values ('Cust_039', 'Apartment', 'Res_060');
+insert into Reservations312 values ('Cust_034', 'Bed_and_Breakfast', 'Res_061');
+insert into Reservations312 values ('Cust_059', 'Hotel', 'Res_062');
+insert into Reservations312 values ('Cust_042', 'Hotel', 'Res_063');
+insert into Reservations312 values ('Cust_027', 'Airbnb', 'Res_064');
+insert into Reservations312 values ('Cust_057', 'Hotel', 'Res_065');
+insert into Reservations312 values ('Cust_020', 'Hotel', 'Res_066');
+insert into Reservations312 values ('Cust_018', 'Bed_and_Breakfast', 'Res_067');
+insert into Reservations312 values ('Cust_005', 'Hotel', 'Res_068');
+insert into Reservations312 values ('Cust_013', 'Apartment', 'Res_069');
+insert into Reservations312 values ('Cust_033', 'Hotel', 'Res_070');
+insert into Reservations312 values ('Cust_009', 'Hotel', 'Res_071');
+insert into Reservations312 values ('Cust_030', 'Apartment', 'Res_072');
+insert into Reservations312 values ('Cust_003', 'Hotel', 'Res_073');
+insert into Reservations312 values ('Cust_072', 'Apartment', 'Res_074');
+insert into Reservations312 values ('Cust_058', 'Airbnb', 'Res_075');
+insert into Reservations312 values ('Cust_032', 'Airbnb', 'Res_076');
+insert into Reservations312 values ('Cust_075', 'Apartment', 'Res_077');
+insert into Reservations312 values ('Cust_015', 'Hotel', 'Res_078');
+insert into Reservations312 values ('Cust_057', 'Hotel', 'Res_079');
+insert into Reservations312 values ('Cust_033', 'Apartment', 'Res_080');
+
+
+
+alter table Employees312
+add CONSTRAINT Employees_312_Manager_fk FOREIGN KEY (Manager) REFERENCES Employees312 (Empl_Code) ENABLE;
+
+alter table Customers312
+add CONSTRAINT Customers312_fk1 FOREIGN KEY (Transportation_Mean) REFERENCES Transportation312 (Transportation_Mean);
+
+alter table Locations312
+add CONSTRAINT Locations312_fk FOREIGN KEY (Category_Number) REFERENCES Categories312 (Category_Number);
+
+alter table Reservations312
+add CONSTRAINT Reservations312_fk FOREIGN KEY (Customer_Code) REFERENCES Customers312 (Customer_Code);
+
+alter table Reservations312
+add CONSTRAINT Reservations312_fk1 FOREIGN KEY (Accommodation_Type) REFERENCES Accommodation312 (Accommodation_Type);
+
+alter table Excursions312
+add CONSTRAINT Excursion312_fk FOREIGN KEY (Location_Code) REFERENCES Locations312 (Location_Code);
+
+alter table Excursions312
+add CONSTRAINT Excursion312_fk1 FOREIGN KEY (Empl_Code) REFERENCES Employees312 (Empl_Code);
+
+alter table Excursions312
+add CONSTRAINT Excursion312_fk2 FOREIGN KEY (Customer_Code) REFERENCES Customers312 (Customer_Code);
+
